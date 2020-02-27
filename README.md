@@ -7,19 +7,19 @@ The script was written on Python and uses psutil module.
 
 ### Requirements
 Python 3 and psutil Python module should be installed.
-To check Python version you can execute
+To check Python version you can execute:
 `python -V`
-In case you have different version check "How to install Python 3" for your OS
+In case you have different version check "How to install Python 3" for your OS.
 For further information please check the Installation section.
 
 ### Installation
-Create the folder for the project and download the project into it.
+Create the folder for the project and download the project into it:
 
 `git clone https://github.com/ChabanOS/gl_devops.git`
 
 `cd gl_devops`
 
-Install psutil module
+Install psutil module:
 
 `pip install -r req.txt`
 
@@ -29,7 +29,7 @@ or
 
 
 ### Usage
-To see the CPU load execute
+To see the CPU load execute.
 
 `python main.py cpu`
 
