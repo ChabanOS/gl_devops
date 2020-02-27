@@ -3,6 +3,8 @@
 ### About
 This script allows to check the main performance metrics.
 The script can show CPU load and Memory consumption.
+Also, the script shows the process that consumes the most resources.
+The process result will be sorted and filtered based on the type of metrics you have provided as an argument.
 The script was written on Python and uses psutil module.
 
 ### Requirements
@@ -63,4 +65,12 @@ Percent             84.1B
 Sin                  0.0B
 Sout                 0.0B
 
+```
+
+### Customization
+You can change the number of process that will be shown as output.
+The variable could be changed in the script.
+```
+proc_num = 5    # Qty of processes that consumed the most CPU time
+mem_val = 500   # in Mb, processes that consumed  more than 500Mb
 ```
