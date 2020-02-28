@@ -8,4 +8,4 @@ COPY req.txt .
 
 RUN pip install -r req.txt
 
-ENTRYPOINT [ "python3.7", "main.py" ]
+ENTRYPOINT [ "python", "main.py" ]
