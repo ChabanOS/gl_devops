@@ -38,11 +38,25 @@ To see the CPU load execute.
 The output of the command will be the following:
 ```
 CPU:
-User                 95.2
-System                3.6
+User                  0.0
+Nice                  0.0
+System                0.0
 Idle                  0.0
-Interrupt             1.2
-Dpc                   0.0
+Iowait                0.0
+Irq                   0.0
+Softirq               0.0
+Steal                 0.0
+Guest                 0.0
+Guest_nice            0.0
+
+PROCES:
+     pid                name            CPU Time              Memory                User
+     970                java             3657.90              388.3M       elasticsearch
+     618                node             2241.91              294.5M              kibana
+     967                beam             1128.29               34.8M            rabbitmq
+     387        xfsaild/dm-0              128.06                0.0B                root
+   21104          containerd              149.23               24.4M                root
+
 ```
 To see the Memory consumption execute the following:
 
@@ -66,6 +80,25 @@ Sin                  0.0B
 Sout                 0.0B
 
 ```
+
+### Docker
+You have an option to run the script in a running docker container.
+To do it just build an image (Dockerfile with all the instruction does already exist in the project folder).
+To create the image, execute the following
+
+```
+docker build -t mon.script .
+
+```
+
+To use the created image execute
+
+```
+docker run --pid host -v /etc/passwd:/etc/passwd --rm mon.script cpu
+docker run --pid host -v /etc/passwd:/etc/passwd --rm mon.script mem
+
+```
+
 
 ### Customization
 You can change the number of process that will be shown as output.
