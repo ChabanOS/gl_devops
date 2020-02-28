@@ -101,7 +101,7 @@ docker run --pid host -v /etc/passwd:/etc/passwd --rm mon.script mem
 
 
 ### Customization
-You can change the number of process that will be shown as output.
+You can change the number of processes that will be shown as output.
 The variable could be changed in the script.
 ```
 proc_num = 5    # Qty of processes that consumed the most CPU time
